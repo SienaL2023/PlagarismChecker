@@ -1,0 +1,50 @@
+package org.yourcompany.yourproject.algorithm;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+
+public class CosineSimilarity implements SimilarityAlgorithm{
+    @Override
+    public double calculate (List<String> tokens1, List<String> tokens2){
+        Map<String, Integer> freq1 = buildFrequency (tokens1); // make a map of each list
+        Map<String, Integer> freq2 = buildFrequency(tokens2);
+
+        double dot = 0;
+
+        // TO DO: get dot product of freq1 and freq2 values
+        // hashmap -> like python dictionary
+
+        return 0;
+    }
+
+    private Map<String, Integer> buildFrequency(List<String> tokens){
+        Map<String, Integer> map = new HashMap<>();  // get and put!
+        for(String token : tokens){  
+            // getordefault gets u the value of the token, if the token isnt in it returns a 0
+            map.put(token, map.getOrDefault(token, 0) + 1);
+            }
+                
+        return map;
+    }
+}
+
+
+// vector = mathematical + physical quantity (magnitude with direction)
+// magnitude = how large in size/quantity
+
+// dot product = operation on 2 vectors that produces a single number (scalar)
+// to determine how much they point into the same direction
+
+// cosine similaorty -> measures the similairty between two vectors by
+// calculating the cosine of the angle between them
+// C(A,B) = (A . B)/ (||A|| x ||B||)
+// where (A . B) = dot product of vectors A and B
+// ||A|| and ||B|| = magnitude (length) of the 2 vectors
+// ||A|| x ||B|| = regular product of the 2 vector's magnitude
+// results in range -1 and 1
+// -1 = vectors point in opposite direction (nothing in similarity)
+// 1 = vectors point in rxact same (identical)
+// 0 = vectors are orthogonal (pointed in right angle) (indp/unrelated)
+
