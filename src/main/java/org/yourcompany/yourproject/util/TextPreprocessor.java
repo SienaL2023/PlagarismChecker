@@ -1,5 +1,0 @@
-package org.yourcompany.yourproject.util;
-
-public class TextPreprocessor {
-    
-}
