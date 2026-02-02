@@ -1,22 +1,25 @@
 package org.yourcompany.yourproject;
 
-import java.util.List;
+import java.io.IOException;
 
-import org.yourcompany.yourproject.algorithm.CosineSimilarity;
-import org.yourcompany.yourproject.algorithm.JaccardSimilarity;
-import org.yourcompany.yourproject.util.TextProcessor;
+import org.yourcompany.yourproject.UI.ConsoleUI;
 
 public class PlagarismChecker {
 
-    public static void main(String[] args) {
-        List<String> a = List.of("Java", "class", "is", "today");
-        List<String> b = List.of("Python", "lesson", "not", "tomorrow");
+    public static void main(String[] args) throws IOException{
+        ConsoleUI ui = new ConsoleUI();
+        ui.start();
+        //String string1 = "the dog went on a walk";
+        // String string2 = "the cat went on two jogs";
 
-        List<String> list = TextProcessor.process("Java class isn't   today");
-        System.out.println(list);
+        // TextLoader txtLoad = new TextLoader();
+        // String string1 = TextLoader.load("C:\\Users\\xiaop\\java projects\\PlagarismChecker\\src\\main\\java\\org\\yourcompany\\yourproject\\util\\text1.txt");
+        // String string2 = TextLoader.load("C:\\Users\\xiaop\\java projects\\PlagarismChecker\\src\\main\\java\\org\\yourcompany\\yourproject\\util\\text2.txt");
+        // SimilarityEngine simEng = new SimilarityEngine();
+        // System.out.println(simEng.compute(string1 ,string2, new JaccardSimilarity()));
+        // System.out.println(simEng.compute(string1,string2, new CosineSimilarity()));
         
-        System.out.println(new JaccardSimilarity().calculate(a,b));
-        System.out.println(new CosineSimilarity().calculate(a,b));
+        // finish up console ui
     }
 }
 

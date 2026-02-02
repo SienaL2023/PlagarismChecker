@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
+// what directions the vectors point too
 public class CosineSimilarity implements SimilarityAlgorithm{
     @Override
     public double calculate (List<String> tokens1, List<String> tokens2){
