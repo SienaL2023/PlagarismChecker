@@ -32,6 +32,8 @@ public class PlagarismChecker {
             │
             ├── ui/
             │     └── ConsoleUI.java
+            |       gui/
+            |       └── PlagiarismFrame.java
             │
             ├── engine/
             │     └── SimilarityEngine.java
@@ -40,6 +42,7 @@ public class PlagarismChecker {
             │     ├── SimilarityAlgorithm.java
             │     ├── JaccardSimilarity.java
             │     └── CosineSimilarity.java
+                  └── TFIDFSimilarity.java
             │
             └── util/
                   ├── TextLoader.java
