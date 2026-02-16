@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import org.yourcompany.yourproject.algorithm.CosineSimilarity;
 import org.yourcompany.yourproject.algorithm.JaccardSimilarity;
+import org.yourcompany.yourproject.algorithm.TFIDFSimilarity;
 import org.yourcompany.yourproject.engine.SimilarityEngine;
 import org.yourcompany.yourproject.util.TextLoader;
 
@@ -22,6 +23,7 @@ public class ConsoleUI {
         System.out.println("Simiarlity results:");
         System.out.println("Jaccard Similarity:" + simEng.compute(string1, string2, new JaccardSimilarity()));
         System.out.println("Cosine Similarity:" + simEng.compute(string1, string2, new CosineSimilarity()));
+        System.out.println("TFIDF similarity:" + simEng.compute(string1,string2, new TFIDFSimilarity()));
 
         // String string1 = TextLoader.load("C:\\Users\\xiaop\\java projects\\PlagarismChecker\\src\\main\\java\\org\\yourcompany\\yourproject\\util\\text1.txt");
         // String string2 = TextLoader.load("C:\\Users\\xiaop\\java projects\\PlagarismChecker\\src\\main\\java\\org\\yourcompany\\yourproject\\util\\text2.txt");

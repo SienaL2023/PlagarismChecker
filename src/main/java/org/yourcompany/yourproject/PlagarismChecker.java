@@ -2,13 +2,15 @@ package org.yourcompany.yourproject;
 
 import java.io.IOException;
 
-import org.yourcompany.yourproject.UI.ConsoleUI;
+import javax.swing.SwingUtilities;
+
+import org.yourcompany.yourproject.UI.PlagarismFrame;
 
 public class PlagarismChecker {
 
     public static void main(String[] args) throws IOException{
-        ConsoleUI ui = new ConsoleUI();
-        ui.start();
+        // ConsoleUI ui = new ConsoleUI();
+        // ui.start();
         //String string1 = "the dog went on a walk";
         // String string2 = "the cat went on two jogs";
 
@@ -20,6 +22,10 @@ public class PlagarismChecker {
         // System.out.println(simEng.compute(string1,string2, new CosineSimilarity()));
         
         // finish up console ui
+
+        SwingUtilities.invokeLater(() -> {
+            new PlagarismFrame().setVisible(true);
+        });
     }
 }
 
